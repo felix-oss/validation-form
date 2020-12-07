@@ -41,4 +41,22 @@ window.Send = function Send() {
     alert("All fields must be filled out");
     return false;
   }
+  var e = document.getElementById("inputState");
+  var strUser = e.options[e.selectedIndex].value;
+
+  var strUser1 = e.options[e.selectedIndex].text;
+  if (strUser == 0) {
+    alert("Please select a State");
+  }
+  if ((document.getElementById("mastercard").checked = false)) {
+    alert("Please select a Payment Method");
+  } else if ((document.getElementById("visa").checked = false)) {
+    alert("Please select a Payment Method");
+  } else if ((document.getElementById("paypal").checked = false)) {
+    alert("Please select a Payment Method");
+  } else if ((document.getElementById("amexpress").checked = false)) {
+    alert("Please select a Payment Method");
+  } else {
+    alert("idk");
+  }
 };
