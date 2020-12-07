@@ -48,15 +48,28 @@ window.Send = function Send() {
   if (strUser == 0) {
     alert("Please select a State");
   }
-  if ((document.getElementById("mastercard").checked = false)) {
-    alert("Please select a Payment Method");
-  } else if ((document.getElementById("visa").checked = false)) {
-    alert("Please select a Payment Method");
-  } else if ((document.getElementById("paypal").checked = false)) {
-    alert("Please select a Payment Method");
-  } else if ((document.getElementById("amexpress").checked = false)) {
-    alert("Please select a Payment Method");
-  } else {
-    alert("idk");
+  //   if ((document.getElementById("mastercard").checked = false)) {
+  //     alert("Please select a Payment Method");
+  //   }
+  //   if ((document.getElementById("visa").checked = false)) {
+  //     alert("Please select a Payment Method");
+  //   }
+  //   if ((document.getElementById("paypal").checked = false)) {
+  //     alert("Please select a Payment Method");
+  //   }
+  //   if ((document.getElementById("amexpress").checked = false)) {
+  //     alert("Please select a Payment Method");
+  //   }
+
+  var radios = document.getElementsByName("payment");
+  var formValid = false;
+
+  var i = 0;
+  while (!formValid && i < radios.length) {
+    if (radios[i].checked) formValid = true;
+    i++;
   }
+
+  if (!formValid) alert("Please pick a payment method");
+  return formValid;
 };
