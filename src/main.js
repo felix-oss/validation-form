@@ -8,38 +8,35 @@ import "./assets/img/4geeks.ico";
 window.Send = function Send() {
   var x = document.forms["myForm"]["fname"].value;
   if (x == "") {
-    alert("All fields must be filled out");
-    return false;
+    document.querySelector("#inputEmail4").style.background =
+      "rgb(223, 104, 104)";
   }
   var a = document.forms["myForm"]["aname"].value;
   if (a == "") {
-    alert("All fields must be filled out");
-    return false;
+    document.querySelector("#inputPassword4").style.background =
+      "rgb(223, 104, 104)";
   }
   var b = document.forms["myForm"]["bname"].value;
   if (b == "") {
-    alert("All fields must be filled out");
-    return false;
+    document.querySelector("#validationDefaultUsername").style.background =
+      "rgb(223, 104, 104)";
   }
   var c = document.forms["myForm"]["cname"].value;
   if (c == "") {
-    alert("All fields must be filled out");
-    return false;
+    document.querySelector("#firstn").style.background = "rgb(223, 104, 104)";
   }
   var d = document.forms["myForm"]["dname"].value;
   if (d == "") {
-    alert("All fields must be filled out");
-    return false;
+    document.querySelector("#secondn").style.background = "rgb(223, 104, 104)";
   }
   var e = document.forms["myForm"]["ename"].value;
   if (e == "") {
-    alert("All fields must be filled out");
-    return false;
+    document.querySelector("#inputCity").style.background =
+      "rgb(223, 104, 104)";
   }
   var v = document.forms["myForm"]["vname"].value;
   if (v == "") {
-    alert("All fields must be filled out");
-    return false;
+    document.querySelector("#inputZip").style.background = "rgb(223, 104, 104)";
   }
   var e = document.getElementById("inputState");
   var strUser = e.options[e.selectedIndex].value;
@@ -73,3 +70,4 @@ window.Send = function Send() {
   if (!formValid) alert("Please pick a payment method");
   return formValid;
 };
+// maybe make it check multiple times like with && then try to change the d-none yk
