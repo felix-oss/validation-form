@@ -71,3 +71,4 @@ window.Send = function Send() {
   return formValid;
 };
 // maybe make it check multiple times like with && then try to change the d-none yk
+// make it so the red goes away if its filled
